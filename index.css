@@ -1,82 +1,139 @@
-*{
+/* Reset some basic styles */
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
 }
 
-body{
-  background-image: url('background.jpg');
-  background-repeat: no-repeat;
-  width:100vw;
-  background-size: 100vh;
-  background-opacity: 0.5;
+body {
+  background: url('background.jpg') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  color: white;
 }
 
-        #datetime {
-            font-size: 20px;
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 10px;
-        }
-        
+#datetime {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+
 #get-city {
-  width: 90%;
-  margin: 4vw;
-  margin-top: 10vh;
-  height: 50px;
-  border: 2px solid black;
-  border-radius:5px ;
+  width: 80%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 1rem;
+  border: 2px solid white;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-align: center;
+  outline: none;
 }
 
 #get-city::placeholder {
-  text-align: center;
-  color: blue;
+  color: white;
+  opacity: 0.7;
 }
-
 
 .details {
+  margin-top: 30px;
+}
+
+.details h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.temp {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.material-symbols-outlined {
+  font-size: 6rem;
+  margin: 10px 0;
+  color: yellow;
+}
+
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
   text-align: center;
-  margin-top: 3vh;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
 
-.details h1{
-  font-size: 15vw;
-  font-family: "Bebas Neue";
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  flex-wrap: wrap;
 }
 
-.temp{
-  font-size: 8vw;
+.footer-content p {
+  margin: 5px 0;
 }
-  footer {
-            background: #222;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            max-width: 1200px;
-            margin: auto;
-            flex-wrap: wrap;
-        }
-        .footer-content p {
-            margin: 5px 0;
-        }
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            margin-top: 10px;
-        }
-        .social-icons a {
-            color: white;
-            margin: 0 10px;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        .social-icons a:hover {
-            color: #1E90FF;
-        }
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 1.5rem;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #1E90FF;
+}
+
+@media (max-width: 768px) {
+  .details h1 {
+    font-size: 2.5rem;
+  }
+  
+  .temp {
+    font-size: 2rem;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #get-city {
+    width: 90%;
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+  
+  .details h1 {
+    font-size: 2rem;
+  }
+  
+  .temp {
+    font-size: 1.5rem;
+  }
+  
+  .material-symbols-outlined {
+    font-size: 3rem;
+  }
+}
