@@ -1,56 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  
-  <title>Weather app</title>
-  
- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-     
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=sunny" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Weather App</title>
   <style>
-    .material-symbols-outlined {
-  color: blue;
-  font-size: 10vw;
-  margin-top: 3vh;
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #9face6);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background-color: #ffffff;
+      padding: 30px 25px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      max-width: 400px;
+      width: 100%;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    #city {
+      width: 100%;
+      padding: 12px 15px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    #search-btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #3498db;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #search-btn:hover {
+      background-color: #2980b9;
+    }
+
+    .weather-info {
+      margin-top: 25px;
+      text-align: center;
+      color: #333;
+    }
+
+    #city-name {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    #temperature {
+      font-size: 40px;
+      font-weight: bold;
+      color: #e67e22;
+      margin-bottom: 10px;
+    }
+
+   p{
+      font-size: 16px;
+      margin-bottom: 6px;
+    }
+  
+.material-symbols-outlined {
   font-variation-settings:
   'FILL' 0,
-  'wght' 300,
+  'wght' 400,
   'GRAD' 0,
-  'opsz' 24
+  'opsz' 24;
+  font-size: 3vw;
+  
 }
-  </style>
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=wb_sunny" />
 </head>
 <body>
-  <div id="datetime"></div>
-  
-	<input type="text" id = "get-city" placeholder="Enter your city name">
-	  
-	  <div class = "details">	
-	  <h1></h1>
-	  
-<span class="material-symbols-outlined">
-</span>
-	<br>
-	<h2 class="temp"></h2>
-	<p></p>
-	<span class="windspeed"></span>
-	</div>
-	
-	
-	
-	<footer>
-	<div class="footer-content">
-            <p>&copy; 2025 Weather App. All rights reserved.</p>
-            <p>Developed by <strong>Sunil Dharajiya with openweather</strong></p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-	<script src="index.js"></script>
+  <div class="container">
+    <h1>Weather App</h1>
+    <input type="text" id="city" placeholder="Enter city name" />
+    <div class="weather-info">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
 </body>
 </html>
